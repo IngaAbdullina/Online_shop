@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS customer (
     address VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL,
     enabled BOOLEAN DEFAULT TRUE,
-    CONSTRAINT unique_name_and_phone_number
+    CONSTRAINT unique_name_and_email
         unique (name, email)
 );
 

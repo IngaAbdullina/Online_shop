@@ -1,5 +1,6 @@
 package com.itmo.onlineshop.exception;
 
+import com.itmo.onlineshop.response.ErrorResult;
 import lombok.Getter;
 
 @Getter

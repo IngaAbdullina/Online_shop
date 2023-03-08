@@ -2,10 +2,10 @@ package com.itmo.onlineshop.controller;
 
 import static java.util.stream.Collectors.joining;
 
-import com.itmo.onlineshop.Response;
 import com.itmo.onlineshop.exception.ApiException;
 import com.itmo.onlineshop.exception.ErrorCode;
-import com.itmo.onlineshop.exception.ErrorResult;
+import com.itmo.onlineshop.response.ErrorResult;
+import com.itmo.onlineshop.response.Response;
 import com.itmo.onlineshop.service.HttpStatusService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.ConstraintViolationException;

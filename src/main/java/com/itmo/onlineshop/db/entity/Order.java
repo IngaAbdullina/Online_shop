@@ -1,6 +1,5 @@
 package com.itmo.onlineshop.db.entity;
 
-import com.itmo.onlineshop.db.Address;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -34,7 +33,7 @@ public class Order {
   private double finalCost;
 
   @Column(name = "delivery_address")
-  private Address deliveryAddress;
+  private String deliveryAddress;
 
   @Column(name = "created_time")
   private Date date;

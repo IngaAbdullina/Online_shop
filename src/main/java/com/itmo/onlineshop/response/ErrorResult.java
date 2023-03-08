@@ -1,6 +1,6 @@
-package com.itmo.onlineshop.exception;
+package com.itmo.onlineshop.response;
 
-import com.itmo.onlineshop.Response;
+import com.itmo.onlineshop.exception.ErrorCode;
 import lombok.Builder;
 import lombok.Getter;
 
