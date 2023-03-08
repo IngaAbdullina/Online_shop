@@ -45,4 +45,7 @@ public class Product {
   // todo when == 0 then can't buy
   @Column(name = "quantity")
   private int quantity;
+
+  @Column(name = "picture_url")
+  private String pictureUrl;
 }
