@@ -1,7 +1,6 @@
 package com.itmo.onlineshop.model;
 
 import com.itmo.onlineshop.db.Position;
-import jakarta.persistence.Column;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
@@ -13,17 +12,25 @@ public class EmployeeToBeCreated {
   @NotBlank(message = "не должно быть пустым")
   @Size(min = 3)
   @Pattern(regexp = "") // todo only latin, ciryllic letters, whitespace and underscore
-  private String name;
+  private String username;
 
   @NotBlank(message = "не должно быть пустым")
   @Size(min = 3)
   @Pattern(regexp = "") // todo only latin, ciryllic letters, numbers
   private String password;
 
-  @Column(name = "position")
+  @NotBlank(message = "не должно быть пустым")
+  @Size(min = 3)
+  @Pattern(regexp = "") // todo only latin, ciryllic letters
+  private String firstName;
+
+  @NotBlank(message = "не должно быть пустым")
+  @Size(min = 3)
+  @Pattern(regexp = "") // todo only latin, ciryllic letters
+  private String lastName;
+
   private Position position;
 
-  @Column(name = "phone_number")
   @Pattern(regexp = "") // todo
   private int phoneNumber;
 }

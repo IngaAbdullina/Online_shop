@@ -6,6 +6,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotNull;
 import java.util.Date;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,7 +16,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "order")
+@Table(name = "orders")
 public class Order {
 
   @Id
@@ -24,17 +25,18 @@ public class Order {
   private long id;
 
   @Column(name = "customer_id")
+  @NotNull(message = "не должно быть пустым")
   private long customerId;
 
-  @Column(name = "product_id")
-  private long productId;
-
   @Column(name = "final_cost")
+  @NotNull(message = "не должно быть пустым")
   private double finalCost;
 
   @Column(name = "delivery_address")
+  @NotNull(message = "не должно быть пустым")
   private String deliveryAddress;
 
   @Column(name = "created_time")
+  @NotNull(message = "не должно быть пустым")
   private Date date;
 }

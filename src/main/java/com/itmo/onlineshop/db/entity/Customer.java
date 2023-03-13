@@ -10,6 +10,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Email;
+import java.math.BigDecimal;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -26,11 +27,17 @@ public class Customer {
   @Column(name = "id")
   private long id;
 
-  @Column(name = "name")
-  private String name;
+  @Column(name = "username")
+  private String username;
 
   @Column(name = "password")
   private String password;
+
+  @Column(name = "first_name")
+  private String firstName;
+
+  @Column(name = "last_name")
+  private String lastName;
 
   @Enumerated(EnumType.STRING)
   @Column(name = "role")
@@ -42,6 +49,9 @@ public class Customer {
   @Email
   @Column(name = "email")
   private String email;
+
+  @Column(name = "balance")
+  private BigDecimal balance;
 
   @Column(name = "enabled")
   private boolean isEnabled;

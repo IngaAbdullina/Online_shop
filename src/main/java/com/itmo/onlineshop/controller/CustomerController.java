@@ -1,15 +1,10 @@
 package com.itmo.onlineshop.controller;
 
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
 public class CustomerController {
 
-  // после авторизации отразить главную страницу сайта
-  // добавить товар в корзину
-  // офоормить заказ
-  //
-  //
-  //
-  //
-  //
-  //
-  //
+  // зарегистрироваться
+  // авторизоваться (после авторизации отразить главную страницу сайта)
 }

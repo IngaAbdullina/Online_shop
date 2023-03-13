@@ -18,15 +18,15 @@ public class ProductServiceImpl implements ProductService {
   }
 
   @Override
-  public List<Product> getAllProducts() {
-    return productRepository.findAll();
-  }
-
-  @Override
-  public Product getProduct(long id) throws ApiException {
+  public Product findById(long id) throws ApiException {
     return productRepository
         .findById(id)
         .orElseThrow(() -> new ApiException(ErrorCode.NOT_FOUND, "Product not found"));
+  }
+
+  @Override
+  public List<Product> getAllProducts() {
+    return productRepository.findAll();
   }
 
   @Override

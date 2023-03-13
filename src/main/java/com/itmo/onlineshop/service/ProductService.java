@@ -6,9 +6,9 @@ import java.util.List;
 
 public interface ProductService {
 
-  List<Product> getAllProducts();
+  Product findById(long id) throws ApiException;
 
-  Product getProduct(long id) throws ApiException;
+  List<Product> getAllProducts();
 
   Product save(Product product);
 }
