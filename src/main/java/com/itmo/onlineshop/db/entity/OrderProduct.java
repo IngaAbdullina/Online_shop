@@ -20,14 +20,14 @@ public class OrderProduct {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "id")
-  private long id;
+  private Long id;
 
   @Column(name = "order_id")
-  private long orderId;
+  private Long orderId;
 
   @Column(name = "product_id")
-  private long productId;
+  private Long productId;
 
   @Column(name = "product_amount")
-  private int productAmount;  // количество товаров с таким id в заказе
+  private Integer productAmount;  // количество товаров с таким id в заказе
 }

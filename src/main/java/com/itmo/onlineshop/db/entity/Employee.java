@@ -25,7 +25,7 @@ public class Employee {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "id")
-  private long id;
+  private Long id;
 
   @Column(name = "username")
   private String username;
@@ -52,5 +52,5 @@ public class Employee {
   private String phoneNumber;
 
   @Column(name = "enabled")
-  private boolean isEnabled;
+  private Boolean isEnabled;
 }

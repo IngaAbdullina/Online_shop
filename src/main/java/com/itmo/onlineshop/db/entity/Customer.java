@@ -25,7 +25,7 @@ public class Customer {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "id")
-  private long id;
+  private Long id;
 
   @Column(name = "username")
   private String username;
@@ -54,5 +54,5 @@ public class Customer {
   private BigDecimal balance;
 
   @Column(name = "enabled")
-  private boolean isEnabled;
+  private Boolean isEnabled;
 }

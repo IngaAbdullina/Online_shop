@@ -9,6 +9,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import java.math.BigDecimal;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -23,7 +24,7 @@ public class Product {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "id")
-  private long id;
+  private Long id;
 
   @Column(name = "name")
   private String name;
@@ -39,7 +40,7 @@ public class Product {
   private String size;
 
   @Column(name = "price")
-  private double price;
+  private BigDecimal price;
 
   // todo decrement when item bought successfully
   // todo when == 0 then can't buy

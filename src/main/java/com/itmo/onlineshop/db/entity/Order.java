@@ -7,6 +7,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotNull;
+import java.math.BigDecimal;
 import java.util.Date;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -22,15 +23,15 @@ public class Order {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "id")
-  private long id;
+  private Long id;
 
   @Column(name = "customer_id")
   @NotNull(message = "не должно быть пустым")
-  private long customerId;
+  private Long customerId;
 
   @Column(name = "final_cost")
   @NotNull(message = "не должно быть пустым")
-  private double finalCost;
+  private BigDecimal finalCost;
 
   @Column(name = "delivery_address")
   @NotNull(message = "не должно быть пустым")
